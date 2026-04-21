@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bionic Butterfly Priority Queue | Wonder Works Rental</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap');
 
         :root {
             --primary: #1565c0;
             --accent: #FFD700; /* Gold */
             --light-bg: rgba(255, 255, 255, 0.75);
-            /* --- MODIFIED: LIGHTER TEXT FOR VISIBILITY --- */
             --text-dark: #f0f0f0; /* Off-white for main headers, labels */
             --text-muted: #cccccc; /* Light grey for small text, footer */
-            /* ----------------------------------------------- */
             --shadow: 0 10px 40px rgba(0,0,0,0.15);
         }
 
@@ -30,7 +28,7 @@
             overflow-x: hidden;
         }
 
-        /* The background image provided via ResCloudinary */
+        /* The background image */
         body::before {
             content: "";
             position: fixed;
@@ -53,21 +51,18 @@
 
         .container {
             backdrop-filter: blur(15px);
-            /* --- MODIFIED: EVEN MORE TRANSLUCENT --- */
             background: rgba(255, 255, 255, 0.25); /* High translucency */
-            /* ----------------------------------------- */
             max-width: 650px;
             width: 90%;
             padding: 50px 40px;
             border-radius: 20px;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border for very translucent look */
+            border: 1px solid rgba(255, 255, 255, 0.1); 
             position: relative;
             overflow: hidden;
             margin: 40px 0;
         }
 
-        /* Subtle animated background shape for extra graphics */
         .container::after {
             content: "🦋";
             position: absolute;
@@ -88,7 +83,7 @@
         .header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 34px;
-            color: #f0f0f0; /* Use light color directly for h1 on dark glass */
+            color: #f0f0f0; 
             margin: 0;
             letter-spacing: -0.5px;
         }
@@ -99,7 +94,7 @@
             font-family: 'Poppins', sans-serif;
             text-transform: uppercase;
             font-weight: 700;
-            color: var(--primary); /* Keep blue primary contrast */
+            color: var(--primary); 
             letter-spacing: 3px;
             margin-bottom: 5px;
         }
@@ -118,24 +113,19 @@
         }
 
         .pre-launch-text {
-            /* --- MODIFIED: USE LIGHTER MUTED TEXT --- */
-            color: var(--text-muted); /* Light grey text */
-            /* --------------------------------------- */
+            color: var(--text-muted); 
             font-size: 15px;
             line-height: 1.6;
             margin-top: 15px;
             font-weight: 400;
         }
 
-        /* Styling for a custom decorative divider */
         .header::after {
             content: "";
             display: block;
             width: 80px;
             height: 3px;
-            /* --- MODIFIED: Lighter gradient line --- */
-            background: linear-gradient(90deg, transparent, var(--accent), transparent); /* Gold for visibility */
-            /* ---------------------------------------- */
+            background: linear-gradient(90deg, transparent, var(--accent), transparent); 
             margin: 25px auto 0 auto;
         }
 
@@ -160,9 +150,7 @@
             font-size: 13px;
             font-weight: 600;
             margin-bottom: 8px;
-            /* --- MODIFIED: LIGHTER TEXT --- */
-            color: #e0e0e0; /* Off-white for labels */
-            /* ------------------------------ */
+            color: #e0e0e0; 
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -174,9 +162,7 @@
         select {
             width: 100%;
             padding: 15px;
-            /* --- MODIFIED: SLIGHTLY LESS TRANSLUCENT INPUTS --- */
-            background-color: rgba(255, 255, 255, 0.8); /* inputs keep solid feel */
-            /* --------------------------------------------------- */
+            background-color: rgba(255, 255, 255, 0.8); 
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 15px;
@@ -188,9 +174,7 @@
 
         input:focus, select:focus {
             outline: none;
-            /* --- MODIFIED: GOLD FOCUS BORDER --- */
-            border-color: var(--accent); /* Use gold for focus */
-            /* ---------------------------------- */
+            border-color: var(--accent); 
             box-shadow: 0 0 10px rgba(0,0,0,0.08);
             transform: translateY(-2px);
         }
@@ -199,18 +183,18 @@
             display: flex;
             align-items: flex-start;
             margin-bottom: 18px;
-            /* --- MODIFIED: SLIGHTLY LESS TRANSLUCENT --- */
-            background-color: rgba(255, 255, 255, 0.9);
-            /* ------------------------------------------- */
+            /* --- MODIFIED: High transparency so white text is visible --- */
+            background-color: rgba(255, 255, 255, 0.1);
+            /* ----------------------------------------------------------- */
             padding: 18px;
             border-radius: 8px;
-            border: 1px solid #eee;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
         
         .checkbox-group:hover {
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-color: #ddd;
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
         .checkbox-group input {
@@ -218,17 +202,17 @@
             margin-right: 14px;
             width: 18px;
             height: 18px;
-            accent-color: var(--primary); /* Keep blue contrast */
+            accent-color: var(--primary); 
             cursor: pointer;
         }
 
         .checkbox-group label {
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 0;
             font-size: 13px;
-            /* --- MODIFIED: LIGHTER TEXT --- */
-            color: #e0e0e0; /* Off-white for labels */
-            /* ------------------------------ */
+            /* --- MODIFIED: Bright white text for visibility --- */
+            color: #ffffff; 
+            /* ------------------------------------------------ */
             text-transform: none;
             line-height: 1.5;
             letter-spacing: 0;
@@ -275,10 +259,8 @@
             text-align: center;
             margin-top: 50px;
             font-size: 12px;
-            /* --- MODIFIED: USE LIGHTER TEXT --- */
-            color: #bbbbbb; /* Light grey footer text */
-            /* ---------------------------------- */
-            border-top: 1px solid rgba(255,255,255,0.1); /* Use light border on dark background */
+            color: #bbbbbb; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
             padding-top: 30px;
             line-height: 1.8;
             font-weight: 300;
